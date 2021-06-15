@@ -18,7 +18,7 @@ cropnet_tsfm =
 
 class CropNet(nn.Module):
     
-    def __init(self):
+    def __init__(self):
         super(CropNet, self).__init__()
         self.fc1 = nn.Linear(3 * 20 * 35, 128)
         self.fc2 = nn.Linear(128, 64)
@@ -151,5 +151,5 @@ class VoxelFlow(nn.Module):
     
 
 if __name__=="__main__":
-    model = VoxelFlow()
+    model = CropNet()
     print(model)
