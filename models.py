@@ -26,6 +26,7 @@ class CropNet(nn.Module):
         self.fc4 = nn.Linear(32, 2)
 
     def forward(self, x):
+        x = torch.flatten(x,1)
         x = F.relu(self.fc1(x))
         x = F.relu(self.fc2(x))
         x = F.relu(self.fc3(x))
